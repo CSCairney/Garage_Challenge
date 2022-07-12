@@ -66,26 +66,17 @@ public class Garage {
 		}
 	}
 
-	public void removeByTypeSingular(Vehicle vehicle) {
-		if (vehicle.getClass().getSimpleName().equals("Car")) {
-			garage.remove(vehicle);
-		} else if (vehicle.getClass().getSimpleName().equals("Motorbike")) {
-			garage.remove(vehicle);
-		} else if (vehicle.getClass().getSimpleName().equals("Quad")) {
-			garage.remove(vehicle);
-		} else {
-			System.out.println("vehicle not present in garage");
-		}
-	}
-	
-	public void removeVehiclesByType(String className) {
+	public int removeVehiclesByType(String className) {
+		int removed = 0;
 		for (int i = 0; i < garage.size(); i++) {
 			Vehicle v = garage.get(i);
 			
-			if (v.getClass().getSimpleName() == className) {
+			if (v.getClass().getSimpleName().equals(className)) {
 				garage.remove(i);
+				i--;
+				removed +=1;
 			}
-		}
+		}return removed;
 	}
 
 }
