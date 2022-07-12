@@ -5,11 +5,24 @@ import org.junit.jupiter.api.Test;
 
 public class CarTest {
 
-	Car testMe = new Car("toyota", "Micra", 2010, 4, 51, "White", 5);
+	Car testMe = new Car("toyota", "Micra", 2010, 4, 51, "White", 5, 1000);
+
+	@Test
+	public void testToString() {
+		assertEquals(("Car Make=" + testMe.getMake() + ", Model=" + testMe.getModel() + ", Year=" + testMe.getYear()
+				+ ", Wheels=" + testMe.getWheels() + ", Millage=" + testMe.getMPG() + ", Colour=" + testMe.getColour()
+				+ ", Windows=" + testMe.getWindows() + ", Engine size=" + testMe.getEngineSize()), testMe.toString());
+	}
 
 	@Test
 	public void testGetColour() {
 		assertEquals("White", testMe.getColour());
+
+	}
+
+	@Test
+	public void testGetEngineSize() {
+		assertEquals(1000, testMe.getEngineSize());
 
 	}
 
@@ -87,10 +100,9 @@ public class CarTest {
 	}
 
 	@Test
-	public void testToString() {
-		assertEquals("Car Make=" + testMe.getMake() + ", Model=" + testMe.getModel() + ", Year=" + testMe.getYear()
-				+ ", Wheels=" + testMe.getWheels() + ", Millage=" + testMe.getMPG() + ", Colour=" + testMe.getColour()
-				+ ", Windows=" + testMe.getWindows(), testMe.toString());
+	public void testSetEngineSize() {
+		testMe.setEngineSize(500);
+		assertEquals(500, testMe.getEngineSize());
 	}
 
 }

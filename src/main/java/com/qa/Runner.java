@@ -10,9 +10,9 @@ public class Runner {
 //		Motorbike Kevin = new Motorbike("Yamaha", "CBR600", 2000, 2, 32, "White", 1);
 //		Motorbike Steven = new Motorbike("Ducati", "Panagali", 2021, 2, 18, "Red", 1);
 //		Motorbike Charlie = new Motorbike("Kawasaki", "Ninja 300", 2006, 2, 24, "Blue", 1);
-//		Car Andy = new Car("toyota", "Micra", 2010, 4, 51, "White", 5);
-//		Car Stewart = new Car("Subaru", "Impreza", 1993, 4, 15, "White", 5);
-//		Car Carol = new Car("Nissan", "240z", 1973, 4, 8, "White", 5);
+//		Car Andy = new Car("toyota", "Micra", 2010, 4, 51, "White", 5, 999);
+//		Car Stewart = new Car("Subaru", "Impreza", 1993, 4, 15, "White", 5, 1000);
+//		Car Carol = new Car("Nissan", "240z", 1973, 4, 8, "White", 5, 1600);
 //		Quad Patrick = new Quad("Aeon", "Cobra 400", 2021, 5, 10, "Green", 0);
 //		Quad Jenny = new Quad("Suzuki", "QuadSport Z400", 2001, 2, 24, "Blue", 0);
 //		Quad Benimaru = new Quad("CFMOTO", "CFORCE", 2006, 2, 13, "Yellow", 1);
@@ -48,7 +48,13 @@ public class Runner {
 //		g.bill(Benimaru);
 //		
 //		g.printVehicle();
+//		g.removeByType("Car");
 //
+//		g.printVehicle();
+//		g.removeVehiclesByType("Car");
+//		g.printVehicle();
+		
+		
 	}
 
 }

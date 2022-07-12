@@ -5,13 +5,15 @@ import org.junit.jupiter.api.Test;
 
 public class QuadTest {
 
-	Quad testMe = new Quad("toyota", "Micra", 2010, 4, 51, "White", 5);
+	Quad testMe = new Quad("toyota", "Micra", 2010, 4, 51, "White", 5, false);
 
 	@Test
 	public void testToString() {
-		assertEquals(("Quad Make=" + testMe.getMake() + ", Model=" + testMe.getModel() + ", Year=" + testMe.getYear()
-				+ ", Wheels=" + testMe.getWheels() + ", Millage=" + testMe.getMPG() + ", Colour=" + testMe.getColour()
-				+ ", Windows=" + testMe.getWindows()), testMe.toString());
+		assertEquals(
+				("Quad Make=" + testMe.getMake() + ", Model=" + testMe.getModel() + ", Year=" + testMe.getYear()
+						+ ", Wheels=" + testMe.getWheels() + ", Millage=" + testMe.getMPG() + ", Colour="
+						+ testMe.getColour() + ", Windows=" + testMe.getWindows() + ", offroad=" + testMe.getOffroad()),
+				testMe.toString());
 	}
 
 	@Test
@@ -48,6 +50,11 @@ public class QuadTest {
 	@Test
 	public void testGetWindows() {
 		assertEquals(5, testMe.getWindows());
+	}
+	
+	@Test
+	public void testGetOffRoad() {
+		assertEquals(false, testMe.getOffroad());
 	}
 
 	@Test
@@ -91,6 +98,12 @@ public class QuadTest {
 	public void testSetWindows() {
 		testMe.setWindows(15);
 		assertEquals(15, testMe.getWindows());
+	}
+	
+	@Test
+	public void testSetOffroad() {
+		testMe.setOffroad(true);
+		assertEquals(true, testMe.getOffroad());
 	}
 
 }

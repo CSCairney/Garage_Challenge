@@ -5,21 +5,25 @@ public class Quad extends Vehicle {
 	private Integer MPG;
 	private String Colour;
 	private Integer Windows;
+	private boolean offroad;
 
 	public Quad() {
 	}
 
-	public Quad(String Make, String Model, Integer Year, Integer Wheels, Integer MPG, String Colour, Integer Windows) {
+	public Quad(String Make, String Model, Integer Year, Integer Wheels, Integer MPG, String Colour, Integer Windows,
+			boolean offroad) {
 		super(Make, Model, Year, Wheels);
 		this.MPG = MPG;
 		this.Colour = Colour;
 		this.Windows = Windows;
+		this.offroad = offroad;
 
 	}
 
 	public String toString() {
 		return "Quad Make=" + getMake() + ", Model=" + getModel() + ", Year=" + getYear() + ", Wheels=" + getWheels()
-				+ ", Millage=" + getMPG() + ", Colour=" + getColour() + ", Windows=" + getWindows();
+				+ ", Millage=" + getMPG() + ", Colour=" + getColour() + ", Windows=" + getWindows() + ", offroad="
+				+ getOffroad();
 	}
 
 	public Integer getMPG() {
@@ -44,6 +48,14 @@ public class Quad extends Vehicle {
 
 	public void setWindows(Integer windows) {
 		Windows = windows;
+	}
+
+	public boolean getOffroad() {
+		return offroad;
+	}
+
+	public void setOffroad(boolean offroad) {
+		this.offroad = offroad;
 	}
 
 }

@@ -8,9 +8,9 @@ import com.qa.vehicle.*;
 public class GarageTest {
 
 	Garage g = new Garage();
-	Car a = new Car("toyota", "Micra", 2010, 4, 51, "White", 5);
-	Motorbike b = new Motorbike("toyota", "Micra", 2010, 4, 51, "White", 5);
-	Quad c = new Quad("toyota", "Micra", 2010, 4, 51, "White", 5);
+	Car a = new Car("toyota", "Micra", 2010, 4, 51, "White", 5, 1000);
+	Motorbike b = new Motorbike("toyota", "Micra", 2010, 4, 51, "White", 5, false);
+	Quad c = new Quad("toyota", "Micra", 2010, 4, 51, "White", 5, false);
 
 	@Test
 	public void testBill() {
@@ -64,4 +64,5 @@ public class GarageTest {
 
 		assertEquals("Quad fix: £" + Labour * QuadRate, g.fix(c));
 	}
-}
+	
+	}
