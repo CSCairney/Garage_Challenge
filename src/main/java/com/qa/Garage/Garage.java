@@ -97,7 +97,11 @@ public class Garage {
 		}
 	}
 
-
+/**
+ * removesVehicleByType
+ * @param className
+ * @return remove counter on removed
+ */
 	public int removeVehiclesByType(String className) {
 		int removed = 0;
 		for (int i = 0; i < garage.size(); i++) {
