@@ -97,13 +97,7 @@ public class Garage {
 		}
 	}
 
-	
-/**
- * removeVehiclesByType removes all vehicle objects of the same type
- * @param className
- * @return
- * a reduction in the removed counter
- */
+
 	public int removeVehiclesByType(String className) {
 		int removed = 0;
 		for (int i = 0; i < garage.size(); i++) {
